@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 62.5%;
+    font-family: "Mulish", sans-serif;
+}
+body {
+    font-size: 1.6rem;
+}
+.page {
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+
+    height: 100%;
+}
+h1 {
+    width: min(1216px, 100%); 
+    margin: 3.6rem auto;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    width: min(1216px, 100%);
+    margin: auto;
+    gap: 7.575rem;
+    height: 8rem;
+    padding: 1.6rem 0;
+    align-items: center;
+}
+header img {
+    height: 4rem;
+    width: 4rem;
+}
+nav {
+    display: flex;
+    align-items: center;
+    gap: 7.575rem;
+}
+nav a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 160%;
+    color: #8D8D99;
+}
+input {
+    height: 4.8rem;
+    padding: 1.6rem;
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+#eu {
+    border-radius: 50%;
+}
+main {
+    background: #F5F5F5;
+    padding-bottom: 6.42rem;
+    overflow-y: scroll;
+    scrollbar-gutter: stable both-edges;
+}
+.container {
+    display: grid;
+    
+    width: min(1216px, 100%);
+    margin: auto;
+}
+main .container {
+    display: grid;
+    grid-template-columns: repeat(3, 39rem);
+    column-gap: 2.08rem;
+    grid-template-rows: repeat(3, 28.8rem);
+    row-gap: 2.22rem;
+}
+.card {
+    background-color: white;
+    border-radius: 0.756rem;
+    overflow: hidden;
+}
+.card img {
+    display: block;
+    width: 39rem;
+}
+.card-text {
+    display: flex;
+    flex-direction: column;
+    height: 9.38rem;
+    justify-content: center;
+    padding: 2.269rem;
+    gap: 1.2rem;
+}
+h2 {
+    font-size: 1.8909rem;
+    font-weight: 700;
+    line-height: 100%;
+    color: #202024;
+}
+.card p {
+    /* padding: 0.756rem; */
+    background-color: #F5F5F5;
+    border-radius: 0.5673rem;
+    font-size: 1.1345rem;
+    font-weight: 400;
+    line-height: 160%;
+    width: 3.8rem;
+    height: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #202024;
+}
+footer {
+    height: 6.9rem;
+    align-items: center;
+    justify-items: center;
+}
+
