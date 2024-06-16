@@ -46,6 +46,9 @@ nav a {
     line-height: 160%;
     color: #8D8D99;
 }
+form {
+    width: 100%;
+}
 input {
     height: 4.8rem;
     padding: 1.6rem;
@@ -53,6 +56,11 @@ input {
     border: none;
     border-radius: 5px;
     width: 100%;
+    font-weight: 600;
+}
+input::placeholder {
+    font-family: "Mulish", sans-serif;
+    opacity: 0.56;
 }
 #eu {
     border-radius: 50%;
@@ -60,8 +68,8 @@ input {
 main {
     background: #F5F5F5;
     padding-bottom: 6.42rem;
-    overflow-y: scroll;
-    scrollbar-gutter: stable both-edges;
+    /* overflow: auto;
+    scrollbar-gutter: stable both-edges; */
 }
 .container {
     display: grid;
@@ -79,12 +87,40 @@ main .container {
 .card {
     background-color: white;
     border-radius: 0.756rem;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
+
 .card img {
+    aspect-ratio: 16/9;
     display: block;
-    width: 39rem;
+    border-radius: 0.756rem 0.756rem 0 0;
 }
+.card img:hover {
+    filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+    cursor: pointer;
+    transform: scale(1.01);
+    transition-property: transform;
+    transition-duration: 0.5s;
+    animation-name: shadow;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+@keyframes shadow {
+    0% {
+        -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+      }
+      100% {
+        -webkit-transform: translateZ(50px);
+                transform: translateZ(50px);
+        -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+                box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+      }
+}
+
 .card-text {
     display: flex;
     flex-direction: column;
