@@ -29,6 +29,17 @@ header {
     height: 8rem;
     padding: 1.6rem 0;
     align-items: center;
+    animation-name: drop-header;
+    animation-duration: 1s;
+}
+@keyframes drop-header {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 header img {
     height: 4rem;
@@ -88,6 +99,19 @@ main .container {
     background-color: white;
     border-radius: 0.756rem;
     /* overflow: hidden; */
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-delay: var(--delay);
+    animation-fill-mode: backwards;
+}
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .card img {
